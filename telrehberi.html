@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -28,18 +28,26 @@ GSM: <input id="gsmkutusu"/>
 	var kayitsayisi=0
 
 	function rehberekaydet() {
-		var isim=document.getElementById("isimkutusu").value
-		var gsm=document.getElementById("gsmkutusu").value
 
-		//alert("isimkutusu"+(kayitsayisi+1))
-		document.getElementById("isimkutusu"+(kayitsayisi+1)).value=isim
-		document.getElementById("gsmkutusu"+(kayitsayisi+1)).value=gsm
+		if (kayitsayisi < 3) {
+			var isim=document.getElementById("isimkutusu").value
+			var gsm=document.getElementById("gsmkutusu").value
 
-		kayitsayisi=kayitsayisi+1
+			if (isim!="" && gsm!="") {
+				document.getElementById("isimkutusu"+(kayitsayisi+1)).value=isim
+				document.getElementById("gsmkutusu"+(kayitsayisi+1)).value=gsm
 
+				kayitsayisi=kayitsayisi+1
 
-		document.getElementById("isimkutusu").value=""
-		document.getElementById("gsmkutusu").value=""
+				document.getElementById("isimkutusu").value=""
+				document.getElementById("gsmkutusu").value=""
+			} else {
+				alert("isim ve gsm bos olamaz")
+			}
+
+		} else {
+			alert("kontenjandolu")
+		}
 
 	}
 
