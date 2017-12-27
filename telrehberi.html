@@ -59,12 +59,14 @@ GSM: <input id="gsmkutusu"/>
 	function kayitlaritemizle(){
 		var tercih = confirm("hepsini silmek istiyor muusn?")
 		if (tercih==true) {
-			document.getElementById("isimkutusu1").value=""
-			document.getElementById("isimkutusu2").value=""
-			document.getElementById("isimkutusu3").value=""
-			document.getElementById("gsmkutusu1").value=""
-			document.getElementById("gsmkutusu2").value=""
-			document.getElementById("gsmkutusu3").value=""
+			
+			var i=1
+			while (i<4) {
+				document.getElementById("isimkutusu"+i).value=""
+				document.getElementById("gsmkutusu"+i).value=""
+				i=i+1
+			}
+
 		}
 	}
 
