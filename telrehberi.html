@@ -20,7 +20,7 @@ GSM: <input id="gsmkutusu"/>
 	<li> <input id="isimkutusu2" /> <input id="gsmkutusu2" /> <button>SİL</button> </li>
 	<li> <input id="isimkutusu3" /> <input id="gsmkutusu3" /> <button>SİL</button> </li>
 </ul>
-
+<button id="kayitlarisildugmesi">TÜM KAYITLARI SİL</button>
 </body>
 
 <script type="text/javascript">
@@ -54,7 +54,19 @@ GSM: <input id="gsmkutusu"/>
 
 	document.getElementById('kaydetdugmesi').onclick=rehberekaydet
 
+	function kayitlaritemizle(){
+		var tercih = confirm("hepsini silmek istiyor muusn?")
+		if (tercih==true) {
+			document.getElementById("isimkutusu1").value=""
+			document.getElementById("isimkutusu2").value=""
+			document.getElementById("isimkutusu3").value=""
+			document.getElementById("gsmkutusu1").value=""
+			document.getElementById("gsmkutusu2").value=""
+			document.getElementById("gsmkutusu3").value=""
+		}
+	}
 
+	document.getElementById("kayitlarisildugmesi").onclick=kayitlaritemizle
 </script>
 
 </html>
