@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>KAYIT FORMU</h1>
+isim: <input id="isimkutusu"/> 
+GSM: <input id="gsmkutusu"/>
+<button id="kaydetdugmesi">KAYDET</button>
+
+<hr />
+
+
+<h1>KAYITLAR</h1>
+
+<ul>
+
+	
+	<li> <input id="isimkutusu1" /> <input id="gsmkutusu1" /> <button>SİL</button> </li>
+	<li> <input id="isimkutusu2" /> <input id="gsmkutusu2" /> <button>SİL</button> </li>
+	<li> <input id="isimkutusu3" /> <input id="gsmkutusu3" /> <button>SİL</button> </li>
+
+
+
+</ul>
+
+</body>
+
+<script type="text/javascript">
+
+	var kayitsayisi=0
+
+	function rehberekaydet() {
+		var isim=document.getElementById("isimkutusu").value
+		var gsm=document.getElementById("gsmkutusu").value
+		
+		alert("isimkutusu"+(kayitsayisi+1))
+		document.getElementById("isimkutusu"+(kayitsayisi+1)).value=isim
+
+		kayitsayisi=kayitsayisi+1
+	}
+
+
+	document.getElementById('kaydetdugmesi').onclick=rehberekaydet
+
+	
+	
+
+	// function hesapla(sayi) {
+	// 	alert(sayi)
+	// 	// alert(sayi*sayi)
+	// 	// alert(sayi*sayi*sayi)
+	// 	// alert(sayi*sayi*sayi*sayi)
+	// }
+
+	// hesapla(2)
+
+	// hesapla(4)
+
+	// hesapla(5)
+
+
+
+
+
+
+
+</script>
+
+</html>
